@@ -78,32 +78,20 @@ function createQuestions(num) {
 	]).then((answers) => {
 		let newCard = new cards.ClozeCard(answers.text, answers.cloze);
 		playerCards.push(newCard);
-		counter--
+		counter--;
 		if (counter === 0) {
 			console.log("\nAll done making questions, let's play!\n".cyan);
 			gamePlay(playerCards);
 		} else {
 			createQuestions(counter);
 		}
-
 	})
 }
 
 
 function gamePlay(array) {
-
 	console.log('\nFill in the blank to answer each question\n'.green);
-	console.log('-----------------------------------------\n');
-
-	if (array === adminCards) {
-		promptQuestions(array, array.length, 0);
-
-	} else {
-		promptQuestions(array, array.length, 0);
-		// array[0].makeFront();
-		// array[0].makeBack();
-	}
-			
+	promptQuestions(array, array.length, 0);
 }
 
 
@@ -120,13 +108,13 @@ function promptQuestions(array, num, i) {
 		}
 		]).then((ans) => {
 			if (ans.answer === array[index].cloze) {
-				console.log('\nHooray\n'.green);
+				console.log(`\nHooray! ${array[index].text}\n`.green);
 				number--;
 				index++;
 				correct++;
 				promptQuestions(array, number, index);
 			} else {
-				console.log('\nYou idiot!\n'.red);
+				console.log(`\nSorry, ${array[index].text}\n`.red);
 				number--;
 				index++;
 				wrong++;
@@ -134,14 +122,15 @@ function promptQuestions(array, num, i) {
 			}
 		})
 	} else {
-		console.log("End of Questions, Great Job!\n".cyan);
-		console.log(`You got ${correct} questions correct!`.cyan);
-		console.log(`You got ${wrong} questions wrong!\n`.cyan);
+		console.log(`\n         End of Questions`.cyan);
+		console.log('----------------------------------'.cyan);
+		console.log(`   You got ${correct} questions correct!`.cyan);
+		console.log(`    You got ${wrong} questions wrong!\n`.cyan);
 		return;
 	}
 }
 
-// Initial cli prompt: 
+	// Initial cli prompt: 
 	// Would you like to play a flash card game? y/n?
 
 	// *yes: Would you like to create your own questions/answers? y/n
