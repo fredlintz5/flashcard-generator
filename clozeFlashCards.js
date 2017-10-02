@@ -51,7 +51,7 @@ function howMany() {
 			inquirer.prompt([
 			{
 				name: 'number',
-				message: "How many questions are we creating (5 or less please...)"
+				message: "How many questions are we creating? (Please input a number...I dont have any validation here...)"
 			}]).then((ans) => {
 				createQuestions(ans.number);
 			})
@@ -135,6 +135,8 @@ function promptQuestions(array, num, i) {
 		})
 	} else {
 		console.log("End of Questions, Great Job!\n".cyan);
+		console.log(`You got ${correct} questions correct!`.cyan);
+		console.log(`You got ${wrong} questions wrong!\n`.cyan);
 		return;
 	}
 }
