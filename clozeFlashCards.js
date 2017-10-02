@@ -10,17 +10,6 @@ let correct = 0;
 let wrong = 0;
 
 
-// cards.ClozeCard.prototype.makeFront = function() {
-// 	let front = this.text.replace(`${this.cloze}`, `...`);
-// 	console.log(front);
-// }
-
-// cards.ClozeCard.prototype.makeBack = function() {
-// 	console.log(this.text);
-// }
-
-
-
 gameStart();
 
 
@@ -130,19 +119,28 @@ function promptQuestions(array, num, i) {
 	}
 }
 
-	// Initial cli prompt: 
-	// Would you like to play a flash card game? y/n?
 
-	// *yes: Would you like to create your own questions/answers? y/n
-	// 		*yes: How many questions do you want to create? (no more than 5)
-	// 			*createQuestions(5);
-	// 			Are you ready to play your new game? y/n
-	// 				yes: gamePlay(userFile);
-	// 				*no: 'That was a lot of hard work for nothing...see you later!'
-	// 		*no: 'Great, we'll use our premade database of questions!'
-	// 			gamePlay(premadeFile);
+// cards.ClozeCard.prototype.makeFront = function() {
+// 	let front = this.text.replace(`${this.cloze}`, `...`);
+// 	console.log(front);
+// }
 
-	// *no: 'Why did you start this prompt anyway? Good bye!'
+// cards.ClozeCard.prototype.makeBack = function() {
+// 	console.log(this.text);
+// }
+
+
+// Initial cli prompt: 
+// Would you like to play a flash card game? y/n?
+// *yes: Would you like to create your own questions/answers? y/n
+// 		*yes: How many questions do you want to create? (no more than 5)
+// 			*createQuestions(5);
+// 			Are you ready to play your new game? y/n
+// 				yes: gamePlay(userFile);
+// 				*no: 'That was a lot of hard work for nothing...see you later!'
+// 		*no: 'Great, we'll use our premade database of questions!'
+// 			gamePlay(premadeFile);
+// *no: 'Why did you start this prompt anyway? Good bye!'
 
 
 
