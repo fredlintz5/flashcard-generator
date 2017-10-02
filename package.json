@@ -1,0 +1,23 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "FlashCard Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredlintz5/flashcard-generator.git"
+  },
+  "author": "Fred Lintz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredlintz5/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/fredlintz5/flashcard-generator#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "inquirer": "^3.3.0"
+  }
+}
